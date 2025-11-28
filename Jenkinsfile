@@ -4,7 +4,7 @@ pipeline {
         stage('Anis - Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t d0ckbl0cker/python-simple-app:latest .'
+                    sh 'docker build -t d0ckbl0cker/python-simple-app:recording .'
                 }
             }
         }
