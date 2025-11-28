@@ -11,7 +11,7 @@ WORKDIR /app
 
 # 3. Copy the application code into the working directory.
 # We are renaming the entry point file to main.py
-COPY tochange.py main.py
+COPY Anis.py main.py
 
 # 4. Define the command that runs your application when the container starts.
 # We use the exec form (square brackets) which is the preferred and safer method.
