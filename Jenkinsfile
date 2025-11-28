@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages{
-        stage('tochange - Build docker image'){
+        stage('Anis - Build docker image'){
             steps{
                 script{
                     sh 'docker build -t d0ckbl0cker/python-simple-app:latest .'
                 }
             }
         }
-        stage('tochange - Login to Dockerhub & Push image to Hub'){
+        stage('Anis - Login to Dockerhub & Push image to Hub'){
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
