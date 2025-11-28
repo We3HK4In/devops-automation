@@ -12,14 +12,14 @@ pipeline {
         }
     
 
-        stage('Build docker image'){
+        stage('tochange - Build docker image'){
             steps{
                 script{
-                    sh 'docker build -t d0ckbl0cker/wtv-repo .'
+                    sh 'docker build -t d0ckbl0cker/python-simple-app:latest .'
                 }
             }
         }
-        stage('Push image to Hub'){
+        stage('tochange - Login to Dockerhub & Push image to Hub'){
             steps{
                 script{
                    withCredentials([string(credentialsId: 'dockerhub-pwd', variable: 'dockerhubpwd')]) {
